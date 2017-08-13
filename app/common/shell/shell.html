@@ -1,56 +1,31 @@
 <div class="shell">
 
-<md-toolbar hide-gt-sm class="responsive-bar">
-  <div class="md-toolbar-tools" layout="row">
-    <ng-md-icon ng-click="$ctrl.toggleLeftMenu($event)" md-ink-ripple icon="menu"></ng-md-icon>
-    <h2>Dashboard</h2>
-  </div>
-</md-toolbar>
-<div layout="row" class="main" layout-fill>
-  <md-sidenav md-component-id="menuLeft" md-is-locked-open="$mdMedia('gt-sm')" class="md-sidenav-left md-whiteframe-z2">    
-    <md-toolbar>
-      <md-toolbar class="md-tall md-hue-2">
-  
-        <span flex></span>
-        <div layout="column" class="md-toolbar-tools-bottom inset">
-          <img class="user-avatar" flex src="./assets/images/avatar.png" />
-          <span></span>
-          <div>Rafael Dantas</div>
-          <div>wgrafael@rafaeldantas.me</div>
-        </div>
-      </md-toolbar>
+    <ul>
+        <ul>
+            <li ui-sref-active="is-active"><a ui-sref="usuario">Cadastro</a></li>
+            <li><a ui-sref="product-list" ng-click="listar()">Listar</a></li>
+            <li><a href="usuario-create">Contact</a></li>
+
+            <li style="float:right">
+                <a class="circle" href="#about"></a>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </li>
+        </ul>
+    </ul>
 
 
-    </md-toolbar>
-   
-    <md-subheader>Gerenciar</md-subheader>
-    <md-list>
-      <md-item ng-repeat="item in $ctrl.menu">
-        <a ui-sref="{{ item.link }}">
-          <md-item-content md-ink-ripple layout="row" layout-align="start center" class="relative">
-            <div class="inset">
-              <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
-            </div>
-            <div class="inset title-menu">{{item.title}}
-            </div>
-          </md-item-content>
-        </a>
-      </md-item> 
-    </md-list>
-    
-  </md-sidenav>
+    <md-card layout-padding>
+        <md-card-content>
+            <ng-transclude></ng-transclude>
+        </md-card-content>
+    </md-card>
 
-  <div layout="column" layout-fill>
-    <md-toolbar hide-sm class="md-hue-1 md-medium-tall">
-      <div class="md-toolbar-tools">
-        Dashboard
-      </div>
-    </md-toolbar>
-
-    <md-content layout-padding layout-aling="center center">
-      <ng-transclude></ng-transclude>
-    </md-content>
-  </div>
-</div>
 
 </div>

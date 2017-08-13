@@ -1,41 +1,79 @@
 .shell {
-  height: 100vh;
-
-  .md-toolbar-tools-bottom {
-    font-size: small;
-
-    & :last-child {
-      opacity: 0.8;
+    ul {
+        font-size: 18px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        height: 90px;
+        width: 100%;
+        overflow: hidden;
+        background-color: #16171A;
+        box-shadow: 0px 3px 6px;
     }
-  }
-
-  md-sidenav {
-    fill: #737373;
-    ng-md-icon {
-      position: relative;
+    li {
+        float: left;
+        height: 80px;
+        max-width: 100%;
     }
-
-    .title-menu {
-      font-size: 15px;
+    li a {
+        display: inline-block;
+        color: #ccc;
+        text-align: center;
+        padding: 20px 16px;
+        margin-top: 20px;
+        text-decoration: none;
     }
-
-    .relative {
-      position: relative;
+    li a.circle {
+        width: 60px;
+        height: 40px;
+        background: #0F0F0F;
+        border: 1px;
+        border-radius: 50%;
+        margin-top: 5px;
+        margin-right: 30px;
+        outline: 0;
+        float: right;
     }
-  }
-
-  .user-avatar {
-    border-radius: 50px;
-    max-width: 80px;
-  }
-
-  .responsive-bar {
-    ng-md-icon {
-      fill: white;
-      margin-right: 20px;
-      margin-top: 5px;
+    li a.dropbtn {
+        display: inline-block;
+        color: #ccc;
+        text-align: center;
+        padding: 20px 16px;
+        text-decoration: none;
+        background-color: #17181B;
+        outline: 0;
+        border-radius: 15px;
     }
-    
-  }
-
+    li a:hover .dropdown:hover .dropbtn {
+        background-color: #16171A;
+    }
+    li.dropdown {
+        display: inline-block;
+        background-color: #17181B;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #17181B;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: blueviolet;
+        padding: 10px 15px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        outline: 0;
+    }
+    .dropdown-content a:hover {
+        background-color: #0F0F0F;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    li a:hover {
+        color: blueviolet;
+    }
 }

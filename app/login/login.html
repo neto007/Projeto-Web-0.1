@@ -1,40 +1,27 @@
 <div layout="column" layout-align="center center" layout-fill="layout-fill">
-    <video loop muted autoplay poster="../../assets/images/festa.png" layout-fill="layout-fill" class="fullscreen-bg">
-        <source src="../../assets/images/videoFundo.mp4" type="video/mp4">
-    </video>
     <div class="{{$ctrl.styles.loginBox}} md-whiteframe-z1" layout="column">
-        <md-toolbar>
-            <h2 class="md-toolbar-tools" layout-align="center center">
-                <span>LOGIN</span>
-            </h2>
-        </md-toolbar>
-        <md-content class="md-padding" layout="column">
-            <form name="loginForm" layout="column">
-                <md-input-container>
-                    <label>E-mail</label>
-                    <input ng-model="$ctrl.styles.loginForm.usuario" name="usuario" required type="email"/>
-                    <div ng-messages="loginForm.usuario.$error" style="color: red" role="alert">
-                        <div ng-message="required">É necessário preencher um email.</div>    
-                        <div ng-message="email">É necessário preencher um email.</div>
-                    </div>
-                </md-input-container>
-                <md-input-container>
-                    <label>Senha</label>
-                    <input ng-model="$ctrl.style.loginForm.senha" name="senha" type="password" required/>
-                    <div ng-messages="loginForm.senha.$error" style="color: red" role="alert">
-                        <div ng-message="required">É necessário preencher uma senha.</div>
-                    </div>
-                </md-input-container>
-            </form>
-            <div layout="column">
-                <md-button type="submit" class="md-primary md-raised" ui-sref="dashboard">Entrar</md-button>
-            </div>
-            <div layout="row" layout-align="center center">
-                <md-button class="md-accent" md-colors="{color: 'teal-400'}">Criar conta</md-button>
-                <div flex>
-                </div>
-                <md-button class="md-accent" md-colors="{color: 'red-400'}">Esqueceu sua senha?</md-button>
-            </div>
-        </md-content>
+
+
+
+        <div class="{{$ctrl.styles.titulo}}">
+            <h2>Login</h2>
+        </div>
+        <form class="w3-container" action="/usuario-create">
+            <p>
+                <label class="{{$ctrl.styles.colortexto}}">Usuario</label>
+                <input class="{{$ctrl.styles.inputLogin}}" name="first" type="text"></p>
+            <br>
+            <label class="{{$ctrl.styles.colortexto}}">Senha</label>
+            <input class="{{$ctrl.styles.inputLogin}}" name=" last " type="password"></p>
+
+            <button class="{{$ctrl.styles.botaoLogin}}">Login</button>
+            <button class="{{$ctrl.styles.botaoCadastro}}">Registrar</button>
+        </form>
+
+
+
+
+
+
     </div>
-</div> 
+</div>

@@ -17,6 +17,7 @@ import * as moment from 'moment';
 import 'angular-material/angular-material.css';
 import 'angular-toastr/dist/angular-toastr.css';
 import Login from './login/login.module';
+import Usuario from './usuario/usuario.module';
 
 
 
@@ -36,6 +37,7 @@ angular.module('app', [
     angularTranslate,
     Common,
     Login,
+  Usuario,
 
 
 
