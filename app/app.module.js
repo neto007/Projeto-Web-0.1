@@ -8,7 +8,6 @@ import angularMessages from 'angular-messages';
 import angularMaterialIcons from 'angular-material-icons';
 import angularAria from 'angular-aria';
 import angularTranslate from 'angular-translate';
-import 'ng-material-datetimepicker/css/material-datetimepicker.css';
 import AppComponent from './app.component';
 import Common from './common/common.module';
 import AngularToastr from 'angular-toastr';
@@ -37,7 +36,7 @@ angular.module('app', [
     angularTranslate,
     Common,
     Login,
-  Usuario,
+    Usuario,
 
 
 

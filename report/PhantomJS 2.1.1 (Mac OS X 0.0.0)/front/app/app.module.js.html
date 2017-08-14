@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">30% </span>
+        <span class="strong">21.43% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>3/10</span>
+        <span class='fraction'>3/14</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/5</span>
+        <span class='fraction'>0/7</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>0/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">30% </span>
+        <span class="strong">21.43% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>3/10</span>
+        <span class='fraction'>3/14</span>
       </div>
     </div>
   </div>
@@ -127,11 +127,8 @@
 82
 83
 84
-85</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+85
+86</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -182,10 +179,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -193,6 +186,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -202,10 +198,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -221,87 +223,88 @@ import angularMessages from 'angular-messages';
 import angularMaterialIcons from 'angular-material-icons';
 import angularAria from 'angular-aria';
 import angularTranslate from 'angular-translate';
-import 'ng-material-datetimepicker/css/material-datetimepicker.css';
 import AppComponent from './app.component';
 import Common from './common/common.module';
-import AngularToastr from 'angular-toastr'; 
-import  'ng-material-datetimepicker';
+import AngularToastr from 'angular-toastr';
+import 'ng-material-datetimepicker';
 import * as moment from 'moment';
-&nbsp;
 import 'angular-material/angular-material.css';
 import 'angular-toastr/dist/angular-toastr.css';
-import Voucher from './voucher/voucher.module';
-&nbsp;
 import Login from './login/login.module';
 import Usuario from './usuario/usuario.module';
 &nbsp;
-import Estabelecimento from './estabelecimento/estabelecimento.module';
-import Evento from './evento/evento.module';
 &nbsp;
 &nbsp;
- 
+&nbsp;
+&nbsp;
+&nbsp;
 &nbsp;
 window.moment = moment;
 // create our app module and setup core dependencies
 angular.module('app', [
-  uiRouter,
-  animate,
-  angularMaterial,
-  angularMaterialIcons,
-  angularMessages,
-  AngularToastr,
-  angularTranslate,
-  'ngMaterialDatePicker',
-  Common, 
-  Voucher, 
-  Login,
-  Usuario,
-  Estabelecimento,
-  Evento,
-  Usuario
+    uiRouter,
+    animate,
+    angularMaterial,
+    angularMaterialIcons,
+    angularMessages,
+    AngularToastr,
+    angularTranslate,
+    Common,
+    Login,
+    Usuario,
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 ])
 &nbsp;
 /* istanbul ignore next */
-.config(($urlRouterProvider, $locationProvider, $mdThemingProvider, $translateProvider) =&gt; <span class="fstat-no" title="function not covered" >{</span>
-  'ngInject';
+.config(($urlRouterProvider, $locationProvider, $stateProvider, $mdThemingProvider) =&gt; <span class="fstat-no" title="function not covered" >{</span>
+    'ngInject';
 &nbsp;
-  // @see: https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions
-  // #how-to-configure-your-server-to-work-with-html5mode
-<span class="cstat-no" title="statement not covered" >  $locationProvider.html5Mode(true);</span>
+    // @see: https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions
+    // #how-to-configure-your-server-to-work-with-html5mode
+<span class="cstat-no" title="statement not covered" >    $locationProvider.html5Mode(true);</span>
 &nbsp;
-  // setup default route
-<span class="cstat-no" title="statement not covered" >  $urlRouterProvider.otherwise('/');</span>
+<span class="cstat-no" title="statement not covered" >    $stateProvider.state('home', {</span>
+        url: '/',
+        redirectTo: 'login'
+    });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  $mdThemingProvider.theme('default')</span>
-      .primaryPalette('purple')
-      .accentPalette('indigo');
+    // setup default route
+<span class="cstat-no" title="statement not covered" >    $urlRouterProvider.otherwise('/');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $mdThemingProvider.theme('default')</span>
+        .primaryPalette('purple')
+        .accentPalette('indigo');
 &nbsp;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  $translateProvider.translations('pt', {</span>
-    CANCEL: "Cancelar",
-    TODAY: "Hoje"
-  })
 })
 &nbsp;
 /* istanbul ignore next */
-.run(($rootScope) =&gt; <span class="fstat-no" title="function not covered" >{</span>
-  // inject shell
-<span class="cstat-no" title="statement not covered" >  $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams, options) <span class="fstat-no" title="function not covered" >{</span></span>
-<span class="cstat-no" title="statement not covered" >    if((!toState.hasOwnProperty('noShell') || toState.noShell === false) &amp;&amp; !(/\&lt;shell\&gt;/g).test(toState.template)) {</span>
-<span class="cstat-no" title="statement not covered" >      toState.template = `&lt;shell&gt;${toState.template}&lt;/shell&gt;`;</span>
-    }
-  });
+.run(($rootScope, $state) =&gt; <span class="fstat-no" title="function not covered" >{</span>
+    // inject shell
+<span class="cstat-no" title="statement not covered" >    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams, options) <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        if (toState.hasOwnProperty('redirectTo')) {</span>
+<span class="cstat-no" title="statement not covered" >            event.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >            $state.go(toState.redirectTo, toParams, { location: 'replace' })</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if ((!toState.hasOwnProperty('noShell') || toState.noShell === false) &amp;&amp; !(/\&lt;shell\&gt;/g).test(toState.template)) {</span>
+<span class="cstat-no" title="statement not covered" >            toState.template = `&lt;shell&gt;${toState.template}&lt;/shell&gt;`;</span>
+        }
+    });
 })
 &nbsp;
 // setup root component
-.component('app', AppComponent);
-&nbsp;</pre></td></tr>
+.component('app', AppComponent);</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Jun 22 2017 01:18:28 GMT-0300 (-03)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Aug 13 2017 22:46:35 GMT-0300 (-03)
 </div>
 </div>
 <script src="../../prettify.js"></script>
